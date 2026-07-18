@@ -3,71 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vexa Bot | Resmi Web Sitesi</title>
+    <title>Vexa Bot | Next-Gen Discord Experience</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700&display=swap');
 
-        html { scroll-behavior: smooth; }
+        :root {
+            --primary: #6366f1;
+            --bg: #0f172a;
+            --card: #1e293b;
+            --text: #f1f5f9;
+        }
+
         body { 
-            margin: 0; padding: 0; 
-            font-family: 'Inter', sans-serif; 
-            background: radial-gradient(circle at top right, #1e1f22, #101012); 
-            color: #ffffff; 
+            margin: 0; 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background: var(--bg); 
+            color: var(--text);
             display: flex; justify-content: center; min-height: 100vh;
+            background-image: radial-gradient(circle at 50% -20%, #312e81, transparent 70%);
         }
+
         .container { 
-            max-width: 800px; width: 90%; margin: 60px 0; 
-            background: rgba(44, 47, 51, 0.7); 
-            backdrop-filter: blur(15px);
-            padding: 50px; border-radius: 24px; 
-            border: 1px solid rgba(255,255,255,0.05);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4); 
+            max-width: 700px; width: 90%; margin: 80px 0; 
+            text-align: center;
         }
-        h1 { font-size: 3rem; margin-bottom: 10px; background: linear-gradient(to right, #5865F2, #7289da); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .btn { 
-            padding: 16px 40px; background: #5865F2; color: white; text-decoration: none; 
-            border-radius: 12px; font-weight: 600; display: inline-block; 
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3);
+
+        h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 20px; letter-spacing: -1px; }
+        .hero-desc { color: #94a3b8; font-size: 1.2rem; margin-bottom: 40px; }
+
+        .btn-main { 
+            background: var(--primary); color: white; padding: 20px 40px;
+            border-radius: 16px; text-decoration: none; font-weight: 700;
+            display: inline-block; transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
         }
-        .btn:hover { background: #4752c4; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(88, 101, 242, 0.5); }
-        .nav-link { color: #8899a6; text-decoration: none; margin-right: 20px; font-size: 0.9rem; transition: 0.3s; }
-        .nav-link:hover { color: #5865F2; }
-        h2 { color: #ffffff; margin-top: 60px; font-size: 1.8rem; border-left: 4px solid #5865F2; padding-left: 15px; }
-        p { line-height: 1.8; color: #b9bbbe; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 15px; color: #dcdcdc; }
-        b { color: #ffffff; }
+        .btn-main:hover { transform: translateY(-5px); box-shadow: 0 20px 35px -5px rgba(99, 102, 241, 0.6); }
+
+        .section { 
+            background: var(--card); border: 1px solid rgba(255,255,255,0.1);
+            padding: 40px; border-radius: 24px; margin-top: 60px; text-align: left;
+            backdrop-filter: blur(10px);
+        }
+
+        h2 { font-size: 1.5rem; margin-top: 0; color: #fff; }
+        ul { padding-left: 20px; color: #94a3b8; }
+        li { margin-bottom: 12px; }
+        
+        .nav-links { margin-top: 30px; }
+        .nav-link { color: #64748b; text-decoration: none; margin: 0 15px; font-weight: 500; transition: 0.3s; }
+        .nav-link:hover { color: #fff; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Vexa Bot</h1>
-        <p>Sunucunuza eğlence, ekonomi ve rekabeti getiren en gelişmiş bot ile tanışın.</p>
-        <a href="https://jubbio.com/oauth2/authorize?client_id=062fcc04b82cf237c3741dcd851a66ca&response_type=code&scope=bot" class="btn">Hemen Sunucuya Ekle</a>
+        <p class="hero-desc">Sunucunuzu bir üst seviyeye taşıyın. Modern, hızlı ve güvenli.</p>
+        <a href="#" class="btn-main">Hemen Sunucuya Ekle</a>
         
-        <div style="margin-top: 40px;">
-            <a href="#hizmet-sartlari" class="nav-link"># Hizmet Şartları</a>
-            <a href="#gizlilik-politikasi" class="nav-link"># Gizlilik Politikası</a>
+        <div class="nav-links">
+            <a href="#sartlar" class="nav-link">Hizmet Şartları</a>
+            <a href="#gizlilik" class="nav-link">Gizlilik Politikası</a>
         </div>
-        
-        <h2 id="hizmet-sartlari">Hizmet Şartları</h2>
-        <p>Vexa Bot'u kullanarak aşağıdaki şartları kabul etmiş olursunuz:</p>
-        <ul>
-            <li><b>Kullanım:</b> Vexa Bot, sunucu içerisinde eğlence ve oyun amaçlı kullanım için tasarlanmıştır.</li>
-            <li><b>Yasaklar:</b> Botun kaynak kodlarını kopyalamak, açıklarından yararlanarak haksız kazanç sağlamak (bug abuse), spam yapmak veya botu Jubbio Hizmet Şartları'na aykırı amaçlarla kullanmak kesinlikle yasaktır.</li>
-            <li><b>Sorumluluk:</b> Botun faaliyetlerinden sunucu sahibi sorumludur. Teknik hata veya veri kaybından dolayı sorumluluk kabul edilmez.</li>
-            <li><b>Değişiklik Hakkı:</b> Geliştirici, bot özelliklerini önceden bildirmeksizin değiştirme hakkına sahiptir.</li>
-        </ul>
 
-        <h2 id="gizlilik-politikasi">Gizlilik Politikası</h2>
-        <p>Gizliliğiniz bizim için en büyük önceliktir. Vexa Bot, kullanıcı verilerini şu şekilde işler:</p>
-        <ul>
-            <li><b>Toplanan Veriler:</b> Sadece oyun içi bakiye, envanter durumu, günlük ödül zamanı ve kullanıcı kimliğiniz (ID) saklanır.</li>
-            <li><b>Veri Güvenliği:</b> Verileriniz, botun çalıştığı sunucuda şifreli bir şekilde tutulur.</li>
-            <li><b>Üçüncü Taraflar:</b> Verileriniz asla satılmaz veya üçüncü taraflarla paylaşılmaz.</li>
-            <li><b>Veri Silme:</b> Verilerinizin silinmesini isterseniz, bot sahibine Jubbio üzerinden ulaşmanız yeterlidir.</li>
-        </ul>
+        <div id="sartlar" class="section">
+            <h2>Hizmet Şartları</h2>
+            <ul>
+                <li><b>Kullanım:</b> Vexa Bot, sunucu içerisinde eğlence ve oyun amaçlı kullanım için tasarlanmıştır.</li>
+                <li><b>Yasaklar:</b> Botun kaynak kodlarını kopyalamak, açıklarından yararlanarak haksız kazanç sağlamak (bug abuse), spam yapmak veya botu Jubbio Hizmet Şartları'na aykırı amaçlarla kullanmak kesinlikle yasaktır.</li> 
+               <li><b>Sorumluluk:</b> Botun sunucunuzdaki faaliyetlerinden sunucu sahibi sorumludur. Vexa Bot, sunucu içerisinde meydana gelebilecek herhangi bir teknik hatadan veya veri kaybından dolayı sorumlu tutulamaz.</li> 
+                <li><b>Değişiklik Hakkı:</b> Bot geliştiricisi, herhangi bir bildirim yapmaksızın botun özelliklerini değiştirme, kapatma veya kullanıma sunmama hakkını saklı tutar.</li>
+            </ul>
+        </div>
+
+        <div id="gizlilik" class="section">
+            <h2>Gizlilik Politikası</h2>
+            <ul>
+                <li><b>Toplanan Veriler:</b> Sadece oyun içi bakiye, envanter durumu, günlük ödül zamanı ve kullanıcı kimliğiniz (ID) saklanır.</li>
+                <li>Verileriniz asla satılmaz veya reklam amaçlı kullanılmaz.</li>
+                 <li><b>Veri Silme:</b> Eğer verilerinizin sistemimizden tamamen silinmesini isterseniz, bot sahibine Jubbio üzerinden ulaşarak talep oluşturabilirsiniz. Tüm verileriniz anında temizlenecektir.</li> 
+            </ul>
+        </div>
     </div>
 </body>
 </html>
