@@ -2,56 +2,42 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vexa Bot | Resmi Jubbio Bot Sitesi</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700;800&display=swap');
-
-        :root {
-            --primary: #6366f1;
-            --primary-glow: rgba(99, 102, 241, 0.3);
-            --bg: #030712;
-            --card: rgba(30, 41, 59, 0.5);
-            --text: #f1f5f9;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 
         body { 
-            margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; 
-            background: var(--bg); color: var(--text);
-            display: flex; justify-content: center; min-height: 100vh;
-            background: radial-gradient(circle at 50% -20%, #1e1b4b, #030712 60%);
+            margin: 0; background-color: #050505; color: #fff;
+            font-family: 'Inter', sans-serif;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.15) 0%, transparent 40%);
         }
 
-        .container { max-width: 700px; width: 90%; margin: 80px 0; text-align: center; }
+        .container { max-width: 800px; margin: 0 auto; padding: 100px 20px; text-align: center; }
 
-        h1 { font-size: 4rem; font-weight: 800; margin-bottom: 10px; background: linear-gradient(to right, #fff, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-desc { color: #94a3b8; font-size: 1.25rem; margin-bottom: 40px; }
+        h1 { font-size: 5rem; font-weight: 900; margin: 0; letter-spacing: -3px; color: #fff; }
+        .hero-desc { font-size: 1.4rem; color: #888; margin-bottom: 50px; }
 
         .btn-main { 
-            background: linear-gradient(135deg, #6366f1, #4f46e5); color: white; 
-            padding: 20px 40px; border-radius: 16px; text-decoration: none; font-weight: 700;
-            display: inline-block; transition: 0.3s; box-shadow: 0 0 20px var(--primary-glow);
+            display: inline-block; padding: 20px 50px; background: #6366f1; color: white;
+            text-decoration: none; font-weight: 700; border-radius: 50px;
+            transition: all 0.3s ease; border: 2px solid transparent;
         }
-        .btn-main:hover { transform: translateY(-5px); box-shadow: 0 10px 30px var(--primary-glow); }
+        .btn-main:hover { background: transparent; border-color: #6366f1; box-shadow: 0 0 30px rgba(99, 102, 241, 0.5); }
 
         .section { 
-            background: var(--card); border: 1px solid rgba(255,255,255,0.05);
-            padding: 40px; border-radius: 30px; margin-top: 60px; text-align: left;
-            backdrop-filter: blur(20px); box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);
+            padding: 50px; border-radius: 40px; margin-top: 80px; text-align: left;
         }
 
-        h2 { font-size: 1.8rem; margin-top: 0; color: #fff; border-left: 4px solid var(--primary); padding-left: 15px; }
-        ul { padding-left: 20px; color: #cbd5e1; }
-        li { margin-bottom: 15px; }
-        
-        .nav-links { margin-top: 40px; }
-        .nav-link { color: #94a3b8; text-decoration: none; margin: 0 15px; font-weight: 500; transition: 0.3s; }
-        .nav-link:hover { color: #fff; }
+        h2 { font-size: 2rem; margin-bottom: 30px; border-bottom: 2px solid #6366f1; display: inline-block; }
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 20px; color: #ccc; line-height: 1.6; }
         
         pre { 
-            white-space: pre-wrap; font-family: 'Courier New', Courier, monospace; 
-            background: rgba(0,0,0,0.3); padding: 20px; border-radius: 15px;
-            color: #818cf8; line-height: 1.8; font-size: 0.9rem; border: 1px solid rgba(99,102,241,0.2);
+            background: #000; padding: 30px; border-radius: 20px; color: #6366f1; 
+            overflow-x: auto; border: 1px solid #333; font-family: monospace;
         }
     </style>
 </head>
@@ -59,14 +45,7 @@
     <div class="container">
         <h1>Vexa Bot</h1>
         <p class="hero-desc">Jubbio sunucunuzu güçlendirin. Modern, hızlı ve güvenli ekonomi deneyimi.</p>
-        
-        <a href="https://jubbio.com/oauth2/authorize?client_id=062fcc04b82cf237c3741dcd851a66ca&response_type=code&scope=bot" class="btn-main">Hemen Sunucuya Ekle</a>
-        
-        <div class="nav-links">
-            <a href="#sartlar" class="nav-link">Hizmet Şartları</a>
-            <a href="#gizlilik" class="nav-link">Gizlilik Politikası</a>
-            <a href="#ozellikler" class="nav-link">Komutlar</a>
-        </div>
+        <a href="https://jubbio.com/oauth2/authorize?client_id=062fcc04b82cf237c3741dcd851a66ca&response_type=code&scope=bot" class="btn-main">Sunucuya Ekle</a>
 
         <div id="sartlar" class="section">
             <h2>Hizmet Şartları</h2>
@@ -126,7 +105,7 @@
 > !ban [ID] 🔨 Belirtilen kişiyi sunucudan yasaklar.
 > !unban [ID] 🔓 Belirtilen kişinin yasağını kaldırır.
 > !kick [ID] 👢 Belirtilen kişiyi sunucudan atar.
-╔═════════════════════════════════════════╝
+╔═════════════════════════════════════════╗
    *İpucu: Komutları eksiksiz yazmayı unutma!*
 ╚═════════════════════════════════════════╝</pre>
         </div>
